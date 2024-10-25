@@ -1,0 +1,34 @@
+Screen1 As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    ButtonCanvas1 As Button:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: |-
+            =If(
+                varOnVisible = true,
+                Set(
+                    varOnVisible,
+                    false
+                ),
+                Set(
+                    varOnVisible,
+                    true
+                )
+            )
+        Width: =96
+        X: =632
+        Y: =352
+        ZIndex: =1
+
+    TextCanvas1 As Text:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: ="Hello World!"
+        Visible: =varOnVisible
+        Width: =96
+        X: =632
+        Y: =421
+        ZIndex: =2
+
